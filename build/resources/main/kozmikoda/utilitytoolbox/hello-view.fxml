@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="p" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-border-radius: 20 20 20 20; -fx-background-color: #121032; -fx-background-radius: 20 20 20 20;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kozmikoda.utilitytoolbox.HelloController">
+   <children>
+      <Button layoutX="256.0" layoutY="175.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="anan yanımda" />
+   </children>
+</Pane>
