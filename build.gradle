@@ -35,6 +35,8 @@ javafx {
 
 dependencies {
 
+    implementation 'org.postgresql:postgresql:42.5.1'
+    implementation 'com.jfoenix:jfoenix:9.0.10'
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
 }
