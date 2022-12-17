@@ -5,5 +5,5 @@
 
 .titlebar {
     -fx-background-radius: 20 20 0 0;
-    -fx-background-color: #0f88e2;
+    -fx-background-color: rgba(40,152,235,1);
 }

@@ -7,19 +7,26 @@ import javafx.scene.Scene;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import kozmikoda.utilitytoolbox.cvf.HelloApplication;
 
 public class GUIRunner extends Application{
 
 
-    public void start(Stage window) throws Exception{
+    public void start(Stage s) throws Exception{
 
-        FXMLLoader mainLayout = new FXMLLoader(getClass().getResource("gui.fxml"));
-        Scene scene = new Scene(mainLayout.load(), 350, 500);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("gui.fxml"));
 
+        Stage mainWindow = loader.load();
+
+
+
+        Scene scene = mainWindow.getScene();
         scene.setFill(Color.TRANSPARENT);
-        window.initStyle(StageStyle.TRANSPARENT);
-        window.setScene(scene);
-        window.show();
+
+        mainWindow.initStyle(StageStyle.TRANSPARENT);
+        mainWindow.setTitle("Cool Voice Finder");
+        mainWindow.setScene(scene);
+        mainWindow.show();
 
     }
 
