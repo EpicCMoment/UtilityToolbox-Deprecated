@@ -12,7 +12,7 @@
             <children>
                <Pane prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #00ffff;" styleClass="mainBackground" stylesheets="@style.css">
                   <children>
-                     <Pane prefHeight="48.0" prefWidth="600.0" style="-fx-background-color: #000000; -fx-background-radius: 20 20 0 0;" />
+                     <Pane fx:id="titlebar" onMouseDragged="#dragWindow" onMousePressed="#setWindowOffset" prefHeight="48.0" prefWidth="600.0" style="-fx-background-color: #000000; -fx-background-radius: 20 20 0 0;" />
                   </children>
                </Pane>
             </children></AnchorPane>
