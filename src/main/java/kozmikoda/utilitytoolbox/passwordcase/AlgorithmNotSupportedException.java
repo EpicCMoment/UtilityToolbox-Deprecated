@@ -1,4 +1,4 @@
-package kozmikoda.utilitytoolbox.passwordmanager;
+package kozmikoda.utilitytoolbox.passwordcase;
 
 public class AlgorithmNotSupportedException extends Exception{
 

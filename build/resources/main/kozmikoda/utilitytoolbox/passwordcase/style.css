@@ -1,0 +1,9 @@
+.mainBackground {
+    -fx-background-radius: 20;
+    -fx-background-color: linear-gradient(to bottom right, rgba(40,152,235,1) 35%, rgba(105,186,235,1) 100%);
+}
+
+.titlebar {
+    -fx-background-radius: 20 20 0 0;
+    -fx-background-color: #0f88e2;
+}

@@ -1,4 +1,4 @@
-package kozmikoda.utilitytoolbox.passwordmanager;
+package kozmikoda.utilitytoolbox.passwordcase;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

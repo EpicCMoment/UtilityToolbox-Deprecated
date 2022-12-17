@@ -1,4 +1,4 @@
-package kozmikoda.utilitytoolbox.passwordmanager;
+package kozmikoda.utilitytoolbox.passwordcase;
 
 import java.security.MessageDigest;
 import java.util.HexFormat;
