@@ -1,4 +1,4 @@
-package com.example.cool_voice_finder_gui;
+package kozmikoda.utilitytoolbox.cvf.cool_voice_finder_gui;
 
 import java.awt.*;
 import java.io.File;

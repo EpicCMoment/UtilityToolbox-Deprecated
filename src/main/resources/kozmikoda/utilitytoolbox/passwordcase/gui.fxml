@@ -10,9 +10,9 @@
         <Scene fx:id="mainLayout">
             <AnchorPane prefHeight="600.0" prefWidth="600.0">
             <children>
-               <Pane prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #00ffff;">
+               <Pane prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #00ffff;" styleClass="mainBackground" stylesheets="@style.css">
                   <children>
-                     <Pane prefHeight="48.0" prefWidth="600.0" style="-fx-background-color: #000000;" />
+                     <Pane prefHeight="48.0" prefWidth="600.0" style="-fx-background-color: #000000; -fx-background-radius: 20 20 0 0;" />
                   </children>
                </Pane>
             </children></AnchorPane>

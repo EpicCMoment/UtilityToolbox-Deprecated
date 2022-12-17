@@ -11,11 +11,13 @@ import javafx.stage.StageStyle;
 public class GUIRunner extends Application{
 
 
-    public void start(Stage window) throws Exception{
+    public void start(Stage s) throws Exception{
 
-        FXMLLoader mainLayout = new FXMLLoader(getClass().getResource("gui.fxml"));
-        Scene scene = new Scene(mainLayout.load(), 350, 500);
 
+        FXMLLoader fxml = new FXMLLoader(getClass().getResource("gui.fxml"));
+        Stage window = fxml.load();
+
+        Scene scene = window.getScene();
         scene.setFill(Color.TRANSPARENT);
         window.initStyle(StageStyle.TRANSPARENT);
         window.setScene(scene);

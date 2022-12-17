@@ -1,4 +1,4 @@
-package com.example.cool_voice_finder_gui;
+package kozmikoda.utilitytoolbox.cvf.cool_voice_finder_gui;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
