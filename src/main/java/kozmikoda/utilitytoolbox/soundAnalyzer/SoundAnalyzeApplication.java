@@ -1,28 +1,23 @@
 package kozmikoda.utilitytoolbox.soundAnalyzer;
 
 import javafx.application.Application;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class SoundAnalyzeApplication extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxml = new FXMLLoader(getClass().getResource("CVFxml.fxml"));
+        FXMLLoader fxml = new FXMLLoader(getClass().getResource("gui.fxml"));
 
-        // FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("CVFxml.fxml"));
+        // FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("gui.fxml"));
 
         Stage window = fxml.load();
-
-
 
         Scene scene = window.getScene();
         scene.setFill(Color.TRANSPARENT);

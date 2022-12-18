@@ -15,7 +15,7 @@ import java.nio.file.StandardCopyOption;
 import java.util.Scanner;
 
 
-public class CoolVoiceController extends Thread {
+public class SoundAnalyzerStart extends Thread {
     Path source;
     Path newDir;
     TextField text;
@@ -24,7 +24,7 @@ public class CoolVoiceController extends Thread {
     Label analyzeLabel;
 
 
-    public CoolVoiceController(File file, TextField text, JFXButton selectButton, ProgressIndicator analyzeBar, Label analyzeLabel) {
+    public SoundAnalyzerStart(File file, TextField text, JFXButton selectButton, ProgressIndicator analyzeBar, Label analyzeLabel) {
         this.source = Paths.get(file.toString());
         this.newDir = Paths.get(System.getProperty("user.dir"));
         this.text = text;

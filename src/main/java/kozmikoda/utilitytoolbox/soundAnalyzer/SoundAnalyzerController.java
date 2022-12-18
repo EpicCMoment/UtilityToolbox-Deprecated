@@ -14,9 +14,8 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.io.File;
-import java.lang.reflect.InvocationTargetException;
 
-public class HelloController {
+public class SoundAnalyzerController {
     double offsetX, offsetY;
 
     @FXML
@@ -68,7 +67,7 @@ public class HelloController {
             );
 
             File sound = fileChooser.showOpenDialog(stage);
-            CoolVoiceController fileObj = new CoolVoiceController(sound, output, selectButton, analyzeBar, analyzeLabel);
+            SoundAnalyzerStart fileObj = new SoundAnalyzerStart(sound, output, selectButton, analyzeBar, analyzeLabel);
             fileObj.startCVF();
             fileObj.start();
             analyzeBar.setVisible(true);
