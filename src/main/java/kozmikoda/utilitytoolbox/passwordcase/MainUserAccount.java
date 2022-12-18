@@ -115,11 +115,15 @@ public class MainUserAccount {
 
         dbConnection.insertIntoTable("services", service, serviceUser, servicePassword);
 
+        services.addService(service, serviceUser, servicePassword);
+
 
     }
 
     public void removeService(String service) throws SQLException{
         dbConnection.removeFromTable("services", "service_name", service);
+
+        services.removeService(service);
     }
 
     private void fetchRealName() throws SQLException{

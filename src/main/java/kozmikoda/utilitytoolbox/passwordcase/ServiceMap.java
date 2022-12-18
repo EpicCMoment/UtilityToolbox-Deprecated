@@ -12,7 +12,7 @@ public class ServiceMap {
     // key of the HashMap ==> Service Name
     // 1.st value in the pair ==> User Identifier
     // 2.nd value in the pair ==> Password
-    HashMap<String, Pair<String, String>> services = new HashMap<>();
+    private HashMap<String, Pair<String, String>> services = new HashMap<>();
 
     ServiceMap() {}
 
@@ -32,6 +32,30 @@ public class ServiceMap {
         }
 
 
+    }
+
+    public String[] getService(String serviceName) throws InvalidServiceException{
+
+        // extract requested service from hashmap
+        Pair<String, String> promptedService = services.get(serviceName);
+
+        // if requested service doesn't exist
+        if (promptedService == null) {
+            throw new InvalidServiceException(serviceName);
+        }
+
+        // put service info into String array
+        // [0] ==> userIdentifier
+        // [1] ==> password
+        return new String[]{promptedService.getKey(), promptedService.getValue()};
+    }
+
+    public void addService(String service, String serviceUser, String servicePassword) {
+        services.put(service, new Pair<>(serviceUser, servicePassword));
+    }
+
+    public void removeService(String service) {
+        services.remove(service);
     }
 
 }
