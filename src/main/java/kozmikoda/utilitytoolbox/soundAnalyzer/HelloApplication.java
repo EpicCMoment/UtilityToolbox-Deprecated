@@ -20,10 +20,12 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxml = new FXMLLoader(getClass().getResource("CVFxml.fxml"));
 
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("CVFxml.fxml"));
-
+        // FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("CVFxml.fxml"));
 
         Stage window = fxml.load();
+
+
+
         Scene scene = window.getScene();
         scene.setFill(Color.TRANSPARENT);
 

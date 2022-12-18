@@ -1,26 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Scene?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressIndicator?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 <?import javafx.stage.Stage?>
-<?import javafx.scene.Scene?>
 
-<Stage  fx:id="window" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kozmikoda.utilitytoolbox.soundAnalyzer.HelloController">
+<Stage fx:id="window" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kozmikoda.utilitytoolbox.soundAnalyzer.HelloController">
    <scene>
-      <Scene onMouseDragged="#dragWindow" onMousePressed="#setWindowOffset" fx:id="mainLayout">
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="683.0" style="-fx-background-color: #211126; -fx-border-color: #FFFFFF; -fx-border-radius: 30; -fx-background-radius: 30; -fx-border-width: 0.4;">
-   <children>
-      <Pane fx:id="titlebar" layoutX="8.0" layoutY="6.0" prefHeight="419.0" prefWidth="667.0">
-         <children>
+      <Scene fx:id="mainLayout">
+      <Pane layoutX="8.0" layoutY="6.0" onMouseDragged="#dragWindow" onMousePressed="#setWindowOffset" prefHeight="419.0" prefWidth="667.0" style="-fx-background-color: #211126; -fx-border-color: #FFFFFF; -fx-border-width: 0.4; -fx-border-radius: 30; -fx-background-radius: 30;">
+            <Pane fx:id="titlebar" layoutX="-4.0" onMouseDragged="#dragWindow" prefHeight="80.0" prefWidth="671.0" />
             <TextField fx:id="output" alignment="CENTER" editable="false" layoutX="198.0" layoutY="300.0" prefHeight="34.0" prefWidth="281.0" promptText=" " style="-fx-border-color: #b81484; -fx-background-color: #2A0033; -fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" styleClass="text-input" stylesheets="@style.css" visible="false">
                <effect>
                   <DropShadow height="38.59" radius="14.3975">
@@ -31,7 +28,7 @@
                </effect></TextField>
             <Separator layoutX="34.0" layoutY="78.0" opacity="0.15" prefHeight="3.0" prefWidth="601.0" />
             <Separator layoutX="33.0" layoutY="381.0" opacity="0.15" prefHeight="3.0" prefWidth="601.0" />
-            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="642.0" layoutY="15.0" text="X" textFill="WHITE">
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="631.0" layoutY="17.0" text="X" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
@@ -43,7 +40,7 @@
                   </DropShadow>
                </effect>
             </Label>
-            <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="634.0" layoutY="13.0" mnemonicParsing="false" onAction="#closeButton" opacity="0.0" prefHeight="25.0" prefWidth="24.0" style="-fx-background-color: #000000;">
+            <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="622.0" layoutY="15.0" mnemonicParsing="false" onAction="#closeButton" opacity="0.0" prefHeight="25.0" prefWidth="24.0" style="-fx-background-color: #000000;">
                <effect>
                   <DropShadow>
                      <color>
@@ -104,11 +101,7 @@
                   </DropShadow>
                </effect>
             </Label>
-         </children>
       </Pane>
-   </children>
-</AnchorPane>
-
       </Scene>
    </scene>
 </Stage>

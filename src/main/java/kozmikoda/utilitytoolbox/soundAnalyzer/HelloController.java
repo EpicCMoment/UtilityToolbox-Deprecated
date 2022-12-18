@@ -40,6 +40,20 @@ public class HelloController {
     Stage stage;
 
     @FXML
+    void dragWindow (MouseEvent event) {
+
+        window.setX(event.getScreenX() - offsetX);
+        window.setY(event.getScreenY() - offsetY);
+    }
+
+    @FXML
+    void setWindowOffset (MouseEvent event) {
+        offsetX = event.getSceneX();
+        offsetY = event.getSceneY();
+
+    }
+
+    @FXML
     protected void selectFileButton(ActionEvent event) {
         selectButton.setDisable(true);
         output.setVisible(false);
@@ -74,21 +88,6 @@ public class HelloController {
     protected void closeButton(ActionEvent event) {
         stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
         stage.close();
-
-    }
-
-    @FXML
-    void dragWindow(MouseEvent event) {
-
-        window.setX(event.getScreenX() - offsetX);
-        window.setY(event.getScreenY() - offsetY);
-    }
-
-    // bu titlebar ın onMouseDragged eventi
-    @FXML
-    void setWindowOffset(MouseEvent event) {
-        offsetX = event.getSceneX();
-        offsetY = event.getSceneY();
 
     }
 
