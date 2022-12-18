@@ -10,18 +10,19 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 
 public class SoundAnalyzeApplication extends Application {
-
     @Override
     public void start(Stage stage) throws IOException {
+        // Loading the fxml
         FXMLLoader fxml = new FXMLLoader(getClass().getResource("gui.fxml"));
 
-        // FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("gui.fxml"));
-
+        // Creating the window
         Stage window = fxml.load();
 
+        //Creating the scene
         Scene scene = window.getScene();
-        scene.setFill(Color.TRANSPARENT);
 
+        // Stage and scene options
+        scene.setFill(Color.TRANSPARENT);
         stage.initStyle(StageStyle.TRANSPARENT);
         stage.setTitle("Cool Voice Finder");
         stage.setScene(scene);

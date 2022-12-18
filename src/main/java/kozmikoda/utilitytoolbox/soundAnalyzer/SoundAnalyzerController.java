@@ -18,6 +18,7 @@ import java.io.File;
 public class SoundAnalyzerController {
     double offsetX, offsetY;
 
+    // FXML variables
     @FXML
     private ProgressIndicator analyzeBar;
     @FXML
@@ -26,17 +27,15 @@ public class SoundAnalyzerController {
     private TextField output;
     @FXML
     private JFXButton selectButton;
-
     @FXML
     private Scene mainLayout;
-
     @FXML
     private Pane titlebar;
-
     @FXML
     private Stage window;
     FileChooser fileChooser = new FileChooser();
-    Stage stage;
+    private Stage stage;
+
 
     @FXML
     void dragWindow (MouseEvent event) {
@@ -52,6 +51,7 @@ public class SoundAnalyzerController {
 
     }
 
+    // Selecting File
     @FXML
     protected void selectFileButton(ActionEvent event) {
         selectButton.setDisable(true);
@@ -66,10 +66,17 @@ public class SoundAnalyzerController {
                     new FileChooser.ExtensionFilter("Wav Files", "*.wav")
             );
 
+            // save the file that is chose by the user
             File sound = fileChooser.showOpenDialog(stage);
-            SoundAnalyzerStart fileObj = new SoundAnalyzerStart(sound, output, selectButton, analyzeBar, analyzeLabel);
-            fileObj.startCVF();
-            fileObj.start();
+            // Creating the sound analyzer object
+            SoundAnalyzerStart analyzerObj = new SoundAnalyzerStart(sound, output, selectButton, analyzeBar, analyzeLabel);
+
+            // Calling the preprocessing function
+            analyzerObj.prepareFile();
+            // Starting the thread
+            analyzerObj.start();
+
+            // Changing the visibilities of progress bar and analyzing label
             analyzeBar.setVisible(true);
             analyzeLabel.setVisible(true);
 
