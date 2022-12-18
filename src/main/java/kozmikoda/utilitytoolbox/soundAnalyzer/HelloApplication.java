@@ -13,8 +13,6 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 
 public class HelloApplication extends Application {
-    private double xOffset = 0;
-    private double yOffset = 0;
 
     @Override
     public void start(Stage stage) throws IOException {

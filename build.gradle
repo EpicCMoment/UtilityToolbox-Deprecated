@@ -25,7 +25,6 @@ tasks.withType(JavaCompile) {
 
 application {
     mainModule = 'kozmikoda.utilitytoolbox'
-    mainClass = 'kozmikoda.utilitytoolbox.HelloApplication'
 }
 
 javafx {
