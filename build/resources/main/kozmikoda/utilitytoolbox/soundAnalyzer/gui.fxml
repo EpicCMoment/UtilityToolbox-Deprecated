@@ -16,8 +16,8 @@
 <Stage fx:id="window" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kozmikoda.utilitytoolbox.soundAnalyzer.SoundAnalyzerController">
    <scene>
          <Scene fx:id="mainLayout">
-      <Pane layoutX="8.0" layoutY="6.0" onMouseDragged="#dragWindow" onMousePressed="#setWindowOffset" prefHeight="419.0" prefWidth="667.0" style="-fx-background-color: #211126; -fx-border-color: #FFFFFF; -fx-border-width: 0.4; -fx-border-radius: 30; -fx-background-radius: 30;">
-            <Pane fx:id="titlebar" layoutX="-4.0" onMouseDragged="#dragWindow" prefHeight="80.0" prefWidth="671.0" />
+      <Pane layoutX="8.0" layoutY="6.0" prefHeight="419.0" prefWidth="667.0" style="-fx-background-color: #211126; -fx-border-color: #FFFFFF; -fx-border-width: 0.4; -fx-border-radius: 30; -fx-background-radius: 30;">
+            <Pane fx:id="titlebar" layoutX="-4.0" prefHeight="80.0" prefWidth="671.0" />
             <TextField fx:id="output" alignment="CENTER" editable="false" layoutX="198.0" layoutY="300.0" prefHeight="34.0" prefWidth="281.0" promptText=" " style="-fx-border-color: #b81484; -fx-background-color: #2A0033; -fx-background-insets: 0; -fx-border-radius: 20; -fx-background-radius: 20;" styleClass="text-input" stylesheets="@style.css" visible="false">
                <effect>
                   <DropShadow height="38.59" radius="14.3975">

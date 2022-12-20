@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Scene?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.stage.Stage?>
+
+<Stage fx:id="window" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kozmikoda.utilitytoolbox.passwordcase.GUIController">
+    <scene>
+        <Scene fx:id="mainLayout">
+               <Pane prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #00ffff;" styleClass="mainBackground" stylesheets="@style.css">
+                   <Pane fx:id="titlebar" onMouseDragged="#dragWindow" onMousePressed="#setWindowOffset" prefHeight="48.0" prefWidth="600.0" style="-fx-background-color: #000000; -fx-background-radius: 20 20 0 0;" />
+               </Pane>
+        </Scene>
+    </scene>
+</Stage>

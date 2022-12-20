@@ -24,8 +24,8 @@ public class SoundAnalyzerStart extends Thread {
     Label analyzeLabel;
 
     public SoundAnalyzerStart(File file, TextField output, JFXButton selectButton, ProgressIndicator analyzeBar, Label analyzeLabel) {
-        this.source = Paths.get(file.toString());
-        this.newDir = Paths.get(System.getProperty("user.dir"));
+        source = Paths.get(file.toString());
+        newDir = Paths.get(System.getProperty("user.dir"));
         this.output = output;
         this.selectButton = selectButton;
         this.analyzeBar = analyzeBar;
@@ -34,6 +34,7 @@ public class SoundAnalyzerStart extends Thread {
 
     public void run() {
         Process process;
+        String data = "Weird unknown error occurred. Please try again.";
         try {
             // Getting the exe path from resources file
             File exePath = new File(newDir.toString() + "\\src\\main\\resources\\kozmikoda\\utilitytoolbox\\soundAnalyzer\\");
@@ -46,29 +47,30 @@ public class SoundAnalyzerStart extends Thread {
             process.waitFor();
 
         }catch(Exception e) {
-            System.out.println("Exception Raised" + e.toString());
+            output.setText(data);
+            e.printStackTrace();
+
         }
 
         // Reading the output from out.txt that is created by executable
-        String data = "An error occurred.";
         try {
-            Path txtPath = this.newDir.resolve("src\\main\\resources\\kozmikoda\\utilitytoolbox\\soundAnalyzer\\out.txt");
+            Path txtPath = newDir.resolve("src\\main\\resources\\kozmikoda\\utilitytoolbox\\soundAnalyzer\\out.txt");
             File myObj = new File(txtPath.toString());
             Scanner myReader = new Scanner(myObj);
 
             data = myReader.nextLine();
             myReader.close();
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+        } catch (FileNotFoundException ignored) {
+
         }
 
         // Change elements visibilities and texts after the operation
-        this.analyzeBar.setVisible(false);
-        this.analyzeLabel.setVisible(false);
-        this.output.setVisible(true);
-        this.output.setText(data);
-        this.selectButton.setDisable(false);
+        analyzeBar.setVisible(false);
+        analyzeLabel.setVisible(false);
+        output.setVisible(true);
+        output.setText(data);
+        selectButton.setDisable(false);
 
     }
 

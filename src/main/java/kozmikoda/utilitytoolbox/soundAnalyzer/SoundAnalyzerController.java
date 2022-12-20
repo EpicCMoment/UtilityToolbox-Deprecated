@@ -16,7 +16,6 @@ import javafx.stage.Stage;
 import java.io.File;
 
 public class SoundAnalyzerController {
-    double offsetX, offsetY;
 
     // FXML variables
     @FXML
@@ -36,20 +35,6 @@ public class SoundAnalyzerController {
     FileChooser fileChooser = new FileChooser();
     private Stage stage;
 
-
-    @FXML
-    void dragWindow (MouseEvent event) {
-
-        window.setX(event.getScreenX() - offsetX);
-        window.setY(event.getScreenY() - offsetY);
-    }
-
-    @FXML
-    void setWindowOffset (MouseEvent event) {
-        offsetX = event.getSceneX();
-        offsetY = event.getSceneY();
-
-    }
 
     // Selecting File
     @FXML
